@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7c9522df15b144ae89322181c18a773c" Name="Diagram1">
+        <EntityTypeShape EntityType="ColegioModel.Cargo" Width="1.5" PointX="9.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Curso" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Dia" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.egresos" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Estudiante" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Gasto" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Grado" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.ingreso" Width="1.5" PointX="9.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Inscripcion" Width="1.5" PointX="7.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Mes" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Pago_salario" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Pagos" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Periodo" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Profesores" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ColegioModel.Usuarios" Width="1.5" PointX="12" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="ColegioModel.FK_Usuarios_Cargo" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Periodo_Curso" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Periodo_Dia" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_egresos_gastos" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_egresos_pagosalario" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Estudiante_Grado" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Inscripcion_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Pagos_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Grado_Profesor" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_ingreso_inscripcion" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_ingreso_mensualidad" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Pago_salario_Mes" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Pagos_Mes" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Pago_salario_Profesor" ManuallyRouted="false" />
+        <AssociationConnector Association="ColegioModel.FK_Periodo_Profesor" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

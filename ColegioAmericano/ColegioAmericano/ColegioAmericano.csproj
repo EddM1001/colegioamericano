@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,6 +132,66 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cargo.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Colegio.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Colegio.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Colegio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Colegio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Colegio.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Curso.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dia.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\egresos.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Estudiante.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gasto.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grado.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ingreso.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inscripcion.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mes.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pagos.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pago_salario.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Periodo.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Profesores.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuarios.cs">
+      <DependentUpon>Colegio.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -139,8 +207,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Colegio.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Colegio.Context.cs</LastGenOutput>
+      <DependentUpon>Colegio.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Colegio.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Colegio.edmx</DependentUpon>
+      <LastGenOutput>Colegio.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Colegio.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Colegio.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Colegio.edmx.diagram">
+      <DependentUpon>Colegio.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -167,9 +252,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -182,6 +265,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
